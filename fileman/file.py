@@ -12,7 +12,8 @@ def f_extension(file: str) -> str:
     Returns:
         extension (str): The extension of the file.
     """
-    return file.split('.')[-1]
+    return file.split(".")[-1]
+
 
 def f_name(file: str) -> str:
     """
@@ -24,7 +25,8 @@ def f_name(file: str) -> str:
     Returns:
         name (str): The name of the file.
     """
-    return file.split('.')[0]
+    return file.split(".")[0]
+
 
 def exists(file: str) -> bool:
     """
@@ -38,8 +40,9 @@ def exists(file: str) -> bool:
     """
     if os.path.isfile(file):
         return True
-    
+
     return False
+
 
 def by_ext(ext: str, folder: str) -> list:
     """
@@ -54,9 +57,6 @@ def by_ext(ext: str, folder: str) -> list:
     """
     files = []
 
-    files = glob.glob(
-        pathname=os.path.join(folder, f"*.{ext}")
-    )
+    files = glob.glob(pathname=os.path.join(folder, f"*.{ext}"))
 
     return files
-    
